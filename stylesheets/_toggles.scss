@@ -1,0 +1,91 @@
+.toggle {
+  padding: 0;
+  height: 35px;
+  width: 80px;
+  display: block;
+  border: 1px solid white;
+  position: relative;
+  margin-left: 8px;
+}
+
+.toggle__toggleInput {
+  display: none;
+  position: absolute;
+}
+
+.toggle:focus {
+  outline: none;
+  border: none;
+}
+
+.toggle__toggleInput:checked + .toggle__label {
+  position: absolute;
+  transition: border-width .1s linear;
+  border: solid green;
+  background-color: white;
+  border-width: 5px 5px 5px 45px;
+}
+
+.toggle__toggleInput + .toggle__label:after {
+  content: "OFF";
+  color: #848383;
+  font-size: .8em;
+  line-height: 2;
+  margin: 0 0 0 40px;
+}
+
+.toggle__toggleInput:checked + .toggle__label:before {
+  content: "ON";
+  color: white;
+  font-size: .8em;
+  line-height: 2;
+  margin: 0 0 0 -35px;
+}
+
+.toggle__toggleInput:checked + .toggle__label:after {
+  content: "";
+}
+
+.toggle__label {
+  height: 35px;
+  width: 100%;
+  background-color: white;
+  border: solid lightgray;
+  border-width: 5px 45px 5px 5px;
+  display: block;
+  cursor: pointer;
+  transition: border-width .1s linear;
+}
+
+/* volume icons */
+
+.toggle__label--volume {
+  border-radius: 30px;
+}
+
+.toggle__toggleInput:checked + .toggle__label--volume {
+  border: solid green;
+  border-width: 5px 5px 5px 45px;
+}
+
+.toggle--volume {
+  border-radius: 30px;
+}
+
+.toggle__toggleInput:checked + .toggle__label--volume:before {
+  color: white;
+  margin: 0 0 0 -32px;
+  content: "\f028";
+  font-family: "FontAwesome";
+  font-size: 1.8em;
+  transform: translate(-2px, -15px);
+  display: inline-block;
+}
+
+.toggle__toggleInput + .toggle__label--volume:after {
+  content: "\f026";
+  font-family: "FontAwesome";
+  font-size: 1.8em;
+  transform: translate(0, -15px);
+  display: inline-block;
+}

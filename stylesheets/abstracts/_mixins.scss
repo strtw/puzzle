@@ -1,0 +1,77 @@
+
+//Box Model Mixins
+
+@mixin componentBoxLarge(){
+  margin:$baseMargin;
+  padding:$basePadding;
+}
+@mixin componentBoxMed(){
+  margin:$baseMargin/2;
+  padding:$basePadding/2;
+}
+
+@mixin componentBoxSmall(){
+  margin:$baseMargin/4;
+  padding:$basePadding/4;
+}
+
+//Font Mixins
+
+@mixin fontHeaderBold(){
+  font-family:$headerFont;
+  font-weight:$weightBold;
+}
+
+@mixin fontHeaderDefault(){
+  font-family:$headerFont;
+  font-weight:$weightRegular;
+}
+
+@mixin fontContent(){
+  font-family:$fontContent;
+  font-weight:$weightRegular;
+}
+
+@mixin fontContentBold(){
+  font-family:$headerFont;
+  font-weight:$weightBold;
+
+}
+
+//Font-awesome mixin
+
+@mixin faMatchElemState($colorDefault,$colorHover,$colorActive){
+  & > i[class*="fa-"]{ //use to match the element that the FA icon is nested in
+    color:$colorDefault;
+    margin-right:6px;
+  }
+  &:hover > i[class*="fa-"]{
+    color:$colorHover;
+  }
+  &:active > i[class*="fa-"]{
+    color:$colorActive;
+  }
+}
+
+
+//Link Mixins
+
+@mixin lovehate($self: false) { //Link Visited Hover Active
+  @if $self {
+    &{    //usage @include lovehate{} OR @include lovehate{$self:true}
+      text-decoration: none;
+    };
+    &,
+    &:visited,
+    &:hover,
+    &:active {
+      @content;
+    }
+  } @else {
+    &:visited,
+    &:hover,
+    &:active {
+      @content;
+    }
+  }
+}

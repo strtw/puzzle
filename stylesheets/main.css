@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Roboto+Mono");
+.puzzle__board {
+  position: relative;
+  background-size: cover;
+  width: 870px;
+  height: 580px;
+  margin: 0 auto; }
+
+.puzzle__backgroundImage-solved {
+  background-image: url("../images/_Puzzle_solved.png"); }
+
+.puzzle__backgroundImage-unSolved {
+  background-image: url("../images/_Puzzle_bg_unsolved.png"); }
+
+.puzzle, .puzzle__drawer {
+  width: 870px;
+  height: 580px;
+  margin: 0 auto; }
+
+div[class*="row"] {
+  width: 100%;
+  overflow-x: visible; }
+
+.col {
+  float: left;
+  height: 106px;
+  width: 106px;
+  margin-right: 62px; }
+
+.puzzle__drawer {
+  border: 2px solid black; }
+
+.puzzle__image {
+  margin-right: 58px; }
+
+.puzzle__grid {
+  position: relative; }
+
+.puzzle__grid-top {
+  top: 47px; }
+
+.puzzle__grid-bottom {
+  top: -320px; }
+
+div[class*="row"] {
+  position: relative; }
+
+div[class*="row"]:nth-child(odd) {
+  margin-left: 42px; }
+
+div[class*="row"]:nth-child(even) {
+  margin-left: 126px; }
+
+div[class*="row"]:nth-child(2) {
+  top: -58px; }
+
+div[class*="row"]:nth-child(3) {
+  top: -115px; }
+
+div[class*="row"]:nth-child(4) {
+  top: -173px; }
+
+.row-0 {
+  top: 0px; }
+
+.row-1 {
+  top: -58px; }
+
+.row-2 {
+  top: -116px; }
+
+.row-3 {
+  top: -174px; }
+
+.row-4 {
+  top: -232px; }
+
+.row-5 {
+  top: -290px; }
+
+.row-6 {
+  top: -348px; }
+
+.row-7 {
+  top: -406px; }
+
+.row-8 {
+  top: -464px; }
+
+.puzzle__container {
+  margin: 0 auto;
+  position: relative;
+  top: 120px;
+  width: 80%; }
+
+.puzzle__shiftPieces {
+  transition: .5s all;
+  transform: translate(0%, 50%);
+  opacity: 0;
+  height: 100%; }
+
+.puzzle__shiftPiecesUp {
+  transition: .5s all;
+  opacity: 1;
+  transform: translate(0%, 0%);
+  height: 100%; }
+
+.puzzle__resetStage {
+  opacity: 0;
+  transform: translate(0%, 50%); }
+
+.puzzle__panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline; }
+
+.puzzle__timer {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+  font-family: Verdana;
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 6px; }
+
+.puzzle__difficulty {
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+  border: 2px solid;
+  padding-left: 10px;
+  border-radius: 3px;
+  margin: 20px; }
+
+.puzzle__difficulty-heading {
+  margin: 0; }
+
+.puzzle__minutes {
+  margin-left: 5px; }
+
+.toggle {
+  padding: 0;
+  height: 35px;
+  width: 80px;
+  display: block;
+  border: 1px solid white;
+  position: relative;
+  margin-left: 8px; }
+
+.toggle__toggleInput {
+  display: none;
+  position: absolute; }
+
+.toggle:focus {
+  outline: none;
+  border: none; }
+
+.toggle__toggleInput:checked + .toggle__label {
+  position: absolute;
+  transition: border-width .1s linear;
+  border: solid green;
+  background-color: white;
+  border-width: 5px 5px 5px 45px; }
+
+.toggle__toggleInput + .toggle__label:after {
+  content: "OFF";
+  color: #848383;
+  font-size: .8em;
+  line-height: 2;
+  margin: 0 0 0 40px; }
+
+.toggle__toggleInput:checked + .toggle__label:before {
+  content: "ON";
+  color: white;
+  font-size: .8em;
+  line-height: 2;
+  margin: 0 0 0 -35px; }
+
+.toggle__toggleInput:checked + .toggle__label:after {
+  content: ""; }
+
+.toggle__label {
+  height: 35px;
+  width: 100%;
+  background-color: white;
+  border: solid lightgray;
+  border-width: 5px 45px 5px 5px;
+  display: block;
+  cursor: pointer;
+  transition: border-width .1s linear; }
+
+/* volume icons */
+.toggle__label--volume {
+  border-radius: 30px; }
+
+.toggle__toggleInput:checked + .toggle__label--volume {
+  border: solid green;
+  border-width: 5px 5px 5px 45px; }
+
+.toggle--volume {
+  border-radius: 30px; }
+
+.toggle__toggleInput:checked + .toggle__label--volume:before {
+  color: white;
+  margin: 0 0 0 -32px;
+  content: "\f028";
+  font-family: "FontAwesome";
+  font-size: 1.8em;
+  transform: translate(-2px, -15px);
+  display: inline-block; }
+
+.toggle__toggleInput + .toggle__label--volume:after {
+  content: "\f026";
+  font-family: "FontAwesome";
+  font-size: 1.8em;
+  transform: translate(0, -15px);
+  display: inline-block; }
+
+.button--primary, .button--primary--round, .button--primarySolid, .button--primarySolid--round, .button--disabled, .button--disabled--round {
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  margin: 20px;
+  padding: 10px;
+  transition: 0.2s background-color;
+  white-space: nowrap;
+  width: 140px;
+  height: 43px; }
+
+.button--primary, .button--primary--round {
+  background-color: #FFFFFF;
+  border: 2px solid #EA1B64;
+  color: #EA1B64; }
+  .button--primary:hover, .button--primary--round:hover {
+    background-color: #EF4381;
+    color: #FFFFFF; }
+  .button--primary:active, .button--primary--round:active {
+    background-color: #C31F5D;
+    color: #FFFFFF; }
+  .button--primary > i[class*="fa-"], .button--primary--round > i[class*="fa-"] {
+    color: #EA1B64;
+    margin-right: 6px; }
+  .button--primary:hover > i[class*="fa-"], .button--primary--round:hover > i[class*="fa-"] {
+    color: #FFFFFF; }
+  .button--primary:active > i[class*="fa-"], .button--primary--round:active > i[class*="fa-"] {
+    color: #FFFFFF; }
+
+.button--primarySolid, .button--primarySolid--round {
+  border: 2px solid #EA1B64;
+  background-color: #EA1B64;
+  color: #FFFFFF; }
+  .button--primarySolid:hover, .button--primarySolid--round:hover {
+    background-color: #EF4381; }
+  .button--primarySolid:active, .button--primarySolid--round:active {
+    background-color: #C31F5D; }
+  .button--primarySolid > i[class*="fa-"], .button--primarySolid--round > i[class*="fa-"] {
+    color: #FFFFFF;
+    margin-right: 6px; }
+  .button--primarySolid:hover > i[class*="fa-"], .button--primarySolid--round:hover > i[class*="fa-"] {
+    color: #FFFFFF; }
+  .button--primarySolid:active > i[class*="fa-"], .button--primarySolid--round:active > i[class*="fa-"] {
+    color: #FFFFFF; }
+
+.button--disabled, .button--disabled--round {
+  background-color: #BDBDBD;
+  border: 2px solid #6D6D6D;
+  color: #FFFFFF; }
+  .button--disabled:hover, .button--disabled--round:hover {
+    background-color: #BDBDBD;
+    color: #FFFFFF; }
+  .button--disabled:active, .button--disabled--round:active {
+    background-color: #BDBDBD;
+    color: #FFFFFF; }
+
+.button--primary--round,
+.button--primarySolid--round,
+.button--disabled,
+.button--disabled--round {
+  border-radius: 20px; }
+
+.buttonGroup {
+  display: inline-flex;
+  margin: 10px;
+  padding: 5px; }
+  .buttonGroup > a[class*="button"] {
+    margin: -3px;
+    display: inherit; }
+  .buttonGroup > a[class*="button"]:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+  .buttonGroup > a[class*="button"]:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+  .buttonGroup > a[class*="button"]:not(:first-child):not(:last-child) {
+    border-radius: 0; }
+
+* {
+  box-sizing: border-box;
+  font-family: Verdana; }
+
+body {
+  background-color: #2E292B;
+  color: white; }
+
+/*# sourceMappingURL=main.css.map */

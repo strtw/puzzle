@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle</title>
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/fdce4b5bc4.js"></script>
+</head>
+<body>
+
+<div class="puzzle__container">
+
+    <div class="puzzle__panel">
+        <a class="button--primarySolid puzzle__start"><i class="fa fa-play" aria-hidden="true"></i>Start Game</a>
+        <a class="button--primarySolid puzzle__resetButton"><i class="fa fa-refresh" aria-hidden="true"></i>Reset Game</a>
+        <a class="button--primary puzzle__hint">  Get Hint: <span class="puzzle__hints">3</span></a>
+
+
+        <div class="puzzle__difficulty">
+            <h4 class="puzzle__difficulty-heading">Advanced Mode</h4>
+            <div class="toggle" tabindex="0">
+                <input class="toggle__toggleInput" id="slide-1" type="checkbox" >
+                <label class="toggle__label" for="slide-1"></label>
+            </div>
+        </div>
+
+
+
+        <div class="puzzle__timer" id="puzzle__timer">
+            Timer
+            <div>
+                <div class="puzzle__minutes"><span class="puzzle__minutes-data">6</span>:</div>
+            </div>
+            <div>
+                <div class="puzzle__seconds"><span class="puzzle__seconds-data">00</span></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="puzzle__board puzzle__backgroundImage-unSolved">
+
+
+        <div class="puzzle__grid puzzle__grid-top">
+
+            <div class="row-0">
+                <div class="col" data-piece="45"><img draggable="true" class="puzzle__image" src="images/Group%2045.png" id="45"></div>
+                <div class="col" data-piece="41"><img draggable="true" class="puzzle__image" src="images/Group%2041.png" id="41"></div>
+                <div class="col" data-piece="37"><img draggable="true" class="puzzle__image" src="images/Group%2037.png" id="37"></div>
+                <div class="col" data-piece="33"><img draggable="true" class="puzzle__image" src="images/Group%2033.png" id="33"></div>
+                <div class="col" data-piece="29"><img draggable="true" class="puzzle__image" src="images/Group%2029.png" id="29"></div>
+            </div>
+
+            <div class="row-1">
+                <div class="col" data-piece="43"><img draggable="true" class="puzzle__image" src="images/Group%2043.png" id="43"></div>
+                <div class="col" data-piece="39"><img draggable="true" class="puzzle__image" src="images/Group%2039.png" id="39"></div>
+                <div class="col" data-piece="35"><img draggable="true" class="puzzle__image" src="images/Group%2035.png" id="35"></div>
+                <div class="col" data-piece="31"><img draggable="true" class="puzzle__image" src="images/Group%2031.png" id="31"></div>
+            </div>
+
+            <div class="row-2">
+                <div class="col" data-piece="44"><img draggable="true" class="puzzle__image" src="images/Group%2044.png" id="44"></div>
+                <div class="col" data-piece="40"><img draggable="true" class="puzzle__image" src="images/Group%2040.png" id="40"></div>
+                <div class="col" data-piece="36"><img draggable="true" class="puzzle__image" src="images/Group%2036.png" id="36"></div>
+                <div class="col" data-piece="32"><img draggable="true" class="puzzle__image" src="images/Group%2032.png" id="32"></div>
+                <div class="col" data-piece="28"><img draggable="true" class="puzzle__image" src="images/Group%2028.png" id="28"></div>
+            </div>
+
+            <div class="row-3">
+                <div class="col" data-piece="42"><img draggable="true" class="puzzle__image" src="images/Group%2042.png" id="42"></div>
+                <div class="col" data-piece="38"><img draggable="true" class="puzzle__image" src="images/Group%2038.png" id="38"></div>
+                <div class="col" data-piece="34"><img draggable="true" class="puzzle__image" src="images/Group%2034.png" id="34"></div>
+                <div class="col" data-piece="30"><img draggable="true" class="puzzle__image" src="images/Group%2030.png" id="30"></div>
+            </div>
+
+            <div class="row-4">
+                <div class="col" data-piece="27"><img draggable="true" class="puzzle__image" src="images/Group%2027.png" id="27"></div>
+                <div class="col" data-piece="18"><img draggable="true" class="puzzle__image" src="images/Group%2018.png" id="18"></div>
+                <div class="col" data-piece="14"><img draggable="true" class="puzzle__image" src="images/Group%2014.png" id="14"></div>
+                <div class="col" data-piece="10"><img draggable="true" class="puzzle__image" src="images/Group%2010.png" id="10"></div>
+                <div class="col" data-piece="06"><img draggable="true" class="puzzle__image" src="images/Group%206.png"  id="06"></div>
+            </div>
+
+            <div class="row-5">
+                <div class="col" data-piece="25"><img draggable="true" class="puzzle__image" src="images/Group%2025.png" id="25"></div>
+                <div class="col" data-piece="16"><img draggable="true" class="puzzle__image" src="images/Group%2016.png" id="16"></div>
+                <div class="col" data-piece="12"><img draggable="true" class="puzzle__image" src="images/Group%2012.png" id="12"></div>
+                <div class="col" data-piece="08"><img draggable="true" class="puzzle__image" src="images/Group%208.png"  id="08"></div>
+            </div>
+
+            <div class="row-6">
+                <div class="col" data-piece="26"><img draggable="true" class="puzzle__image" src="images/Group%2026.png" id="26"></div>
+                <div class="col" data-piece="17"><img draggable="true" class="puzzle__image" src="images/Group%2017.png" id="17"></div>
+                <div class="col" data-piece="13"><img draggable="true" class="puzzle__image" src="images/Group%2013.png" id="13"></div>
+                <div class="col" data-piece="09"><img draggable="true" class="puzzle__image" src="images/Group%209.png"  id="09"></div>
+                <div class="col" data-piece="05"><img draggable="true" class="puzzle__image" src="images/Group%205.png"  id="05"></div>
+            </div>
+
+            <div class="row-7">
+                <div class="col" data-piece="24"><img draggable="true" class="puzzle__image" src="images/Group%2024.png" id="24"></div>
+                <div class="col" data-piece="15"><img draggable="true" class="puzzle__image" src="images/Group%2015.png" id="15"></div>
+                <div class="col" data-piece="11"><img draggable="true" class="puzzle__image" src="images/Group%2011.png" id="11"></div>
+                <div class="col" data-piece="07"><img draggable="true" class="puzzle__image" src="images/Group%207.png"  id="07"></div>
+            </div>
+
+            <div class="row-8">
+                <div class="col" data-piece="23"><img draggable="true" class="puzzle__image" src="images/Group%2023.png" id="23"></div>
+                <div class="col" data-piece="22"><img draggable="true" class="puzzle__image" src="images/Group%2022.png" id="22"></div>
+                <div class="col" data-piece="21"><img draggable="true" class="puzzle__image" src="images/Group%2021.png" id="21"></div>
+                <div class="col" data-piece="20"><img draggable="true" class="puzzle__image" src="images/Group%2020.png" id="20"></div>
+                <div class="col" data-piece="19"><img draggable="true" class="puzzle__image" src="images/Group%2019.png" id="19"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="puzzle__drawer">
+       <div class="puzzle__grid puzzle__grid-bottom">
+
+        <div class="row-0">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row-1">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row-2">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row-3">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row-4">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row-5">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row-6">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row-7">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row-8">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+
+    </div>
+
+    </div>
+</div>
+
+
+
+</body>
+<script src="scripts/puzzle.js"></script>
+</html>

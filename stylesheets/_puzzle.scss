@@ -1,0 +1,156 @@
+.puzzle__board{
+  position: relative;
+  background-size: cover;
+  width:870px;
+  height:580px;
+  margin: 0 auto;
+}
+
+.puzzle__backgroundImage-solved{
+  background-image: url("../images/_Puzzle_solved.png")
+}
+
+.puzzle__backgroundImage-unSolved{
+  background-image: url('../images/_Puzzle_bg_unsolved.png');
+}
+
+
+.puzzle,.puzzle__drawer{
+  width:870px;
+  height:580px;
+  margin: 0 auto;
+}
+
+
+div[class*="row"]{
+  width:100%;
+  overflow-x: visible;
+}
+
+.col{
+  float:left;
+  height:106px;
+  width: 106px;
+  margin-right: 62px;
+}
+
+.puzzle__drawer{
+  border:2px solid black;
+}
+
+.puzzle__image{
+  margin-right:58px;
+}
+.puzzle__grid {
+  position: relative;
+}
+
+.puzzle__grid-top{
+  top: 47px;
+}
+
+.puzzle__grid-bottom{
+  top: -320px;
+}
+
+div[class*="row"]{
+  position:relative;
+}
+
+div[class*="row"]:nth-child(odd){
+  margin-left:42px;
+}
+
+div[class*="row"]:nth-child(even){
+  margin-left:126px;
+}
+
+div[class*="row"]:nth-child(1){
+
+}
+
+div[class*="row"]:nth-child(2){
+  top:-58px;
+}
+
+div[class*="row"]:nth-child(3){
+  top:-115px;
+}
+
+div[class*="row"]:nth-child(4){
+  top:-173px;
+}
+
+$step: -58;
+
+@for $i from 0 through 8 {
+  $value: $step * $i;
+  .row-#{$i} {
+    top: $value + px;
+  }
+}
+
+.puzzle__container{
+  margin:0 auto;
+  position:relative;
+  top:120px;
+  width:80%;
+}
+
+.puzzle__shiftPieces{
+  transition:.5s all;
+  transform: translate(0%,50%);
+  opacity:0;
+  height:100%;
+}
+
+.puzzle__shiftPiecesUp{
+  transition:.5s all;
+  opacity:1;
+  transform: translate(0%,0%);
+  height:100%;
+}
+
+.puzzle__resetStage{
+  opacity:0;
+  transform: translate(0%,50%);
+}
+
+.puzzle__panel{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.puzzle__timer{
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+  font-family: Verdana;
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 6px;
+}
+
+.puzzle__difficulty{
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+  border: 2px solid;
+  padding-left: 10px;
+  border-radius: 3px;
+  margin:20px;
+}
+
+.puzzle__difficulty-heading{
+  margin:0;
+}
+
+.puzzle__minutes{
+  margin-left:5px;
+}
+
+.puzzle__seconds{
+
+}

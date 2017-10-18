@@ -1,0 +1,47 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Roboto+Mono');
+
+$roboto:'Roboto', serif;
+$open-sans:'Open Sans', sans-serif;
+
+// Font Variables - find related in _mixins
+$headerFont: 'Roboto', serif;
+$fontMono:"Roboto Mono", monospace;
+$fontContent: 'Open Sans', sans-serif;
+
+$weightRegular:400;
+$weightBold:700;
+$fontSmall:.8em;
+$fontMed:1.5em;
+$fontLarge:2em;
+
+$baseColorDark: #C31F5D;
+$baseColorMed: #EA1B64;
+$baseColorLight: #EF4381;
+$baseColorAlt: #CF477C; // USED FOR FORM TEXT INPUT BACKGROUND COLOR
+$defaultColor: #202020; // MAIN TEXT COLOR, PICKED FROM BLACK BUTTON IN BUTTON GROUPS
+$defaultColorLight:#6D6D6D;
+$invertDefaultColor:#FFFFFF;
+$altColor: #BDBDBD; // SUB TEXT COLOR, PICKED FROM GRAY 'DISABLED' BUTTON IN BUTTON GROUPS 
+$altColorTransparent:rgba( $altColor, .6 );
+//Transition Variables
+
+$transitionFast: .2s;
+$transitionMed: .4s;
+$transitionSlow: .8s;
+
+//Div Shape Variables
+
+$borderRoundedSoft:3px;
+$borderRoundedHard:20px;
+$borderThin:1px solid;
+$borderDefault:2px solid;
+$borderThick:3px solid;
+
+//Box Model Variables -- find related in _mixins
+
+$baseMargin:20px;
+$basePadding:10px;
+
+
+
